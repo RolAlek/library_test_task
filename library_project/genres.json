@@ -1,0 +1,72 @@
+[
+    {
+        "model": "library.genre",
+        "pk": 1,
+        "fields": {
+            "name": "Роман"
+        }
+    },
+    {
+        "model": "library.genre",
+        "pk": 2,
+        "fields": {
+            "name": "Драма"
+        }
+    },
+    {
+        "model": "library.genre",
+        "pk": 3,
+        "fields": {
+            "name": "Сатира"
+        }
+    },
+    {
+        "model": "library.genre",
+        "pk": 4,
+        "fields": {
+            "name": "Фантастика"
+        }
+    },
+    {
+        "model": "library.genre",
+        "pk": 5,
+        "fields": {
+            "name": "Нон-фикшн"
+        }
+    },
+    {
+        "model": "library.genre",
+        "pk": 6,
+        "fields": {
+            "name": "Приключения"
+        }
+    },
+    {
+        "model": "library.genre",
+        "pk": 7,
+        "fields": {
+            "name": "Исторический роман"
+        }
+    },
+    {
+        "model": "library.genre",
+        "pk": 8,
+        "fields": {
+            "name": "Социальная драма"
+        }
+    },
+    {
+        "model": "library.genre",
+        "pk": 9,
+        "fields": {
+            "name": "Литературная классика"
+        }
+    },
+    {
+        "model": "library.genre",
+        "pk": 10,
+        "fields": {
+            "name": "Экспериментальная проза"
+        }
+    }
+]

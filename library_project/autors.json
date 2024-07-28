@@ -1,0 +1,142 @@
+[
+    {
+        "model": "library.author",
+        "pk": 1,
+        "fields": {
+            "full_name": "Лев Толстой"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 2,
+        "fields": {
+            "full_name": "Федор Достоевский"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 3,
+        "fields": {
+            "full_name": "Антон Чехов"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 4,
+        "fields": {
+            "full_name": "Александр Пушкин"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 5,
+        "fields": {
+            "full_name": "Михаил Булгаков"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 6,
+        "fields": {
+            "full_name": "Борис Пастернак"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 7,
+        "fields": {
+            "full_name": "Даниил Хармс"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 8,
+        "fields": {
+            "full_name": "Николай Гоголь"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 9,
+        "fields": {
+            "full_name": "Гектор Мало"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 10,
+        "fields": {
+            "full_name": "Оноре де Бальзак"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 11,
+        "fields": {
+            "full_name": "Эрнест Хемингуэй"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 12,
+        "fields": {
+            "full_name": "Марк Твен"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 13,
+        "fields": {
+            "full_name": "Гарпер Ли"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 14,
+        "fields": {
+            "full_name": "Франц Кафка"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 15,
+        "fields": {
+            "full_name": "Джейн Остин"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 16,
+        "fields": {
+            "full_name": "Габриэль Гарсиа Маркес"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 17,
+        "fields": {
+            "full_name": "Вирджиния Вулф"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 18,
+        "fields": {
+            "full_name": "Филип Пулман"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 19,
+        "fields": {
+            "full_name": "Рэй Брэдбери"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 20,
+        "fields": {
+            "full_name": "Стендаль"
+        }
+    }
+]

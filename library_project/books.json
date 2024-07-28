@@ -1,0 +1,650 @@
+[
+    {
+        "model": "library.book",
+        "pk": 1,
+        "fields": {
+            "title": "Война и мир",
+            "author": 1,
+            "genre": 7
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 2,
+        "fields": {
+            "title": "Анна Каренина",
+            "author": 1,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 3,
+        "fields": {
+            "title": "Смерть Ивана Ильича",
+            "author": 1,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 4,
+        "fields": {
+            "title": "Воскресение",
+            "author": 1,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 5,
+        "fields": {
+            "title": "Крейцерова соната",
+            "author": 1,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 6,
+        "fields": {
+            "title": "Сон смешного человека",
+            "author": 1,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 7,
+        "fields": {
+            "title": "Объяснение",
+            "author": 1,
+            "genre": 5
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 8,
+        "fields": {
+            "title": "История болезни",
+            "author": 1,
+            "genre": 5
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 9,
+        "fields": {
+            "title": "Казаки",
+            "author": 1,
+            "genre": 6
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 10,
+        "fields": {
+            "title": "Две встречи",
+            "author": 1,
+            "genre": 8
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 11,
+        "fields": {
+            "title": "Преступление и наказание",
+            "author": 2,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 12,
+        "fields": {
+            "title": "Идиот",
+            "author": 2,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 13,
+        "fields": {
+            "title": "Бесы",
+            "author": 2,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 14,
+        "fields": {
+            "title": "Братя Карамазовы",
+            "author": 2,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 15,
+        "fields": {
+            "title": "Записки из подполья",
+            "author": 2,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 16,
+        "fields": {
+            "title": "Униженные и оскорблённые",
+            "author": 2,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 17,
+        "fields": {
+            "title": "Игрок",
+            "author": 2,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 18,
+        "fields": {
+            "title": "Двойник",
+            "author": 2,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 19,
+        "fields": {
+            "title": "Неточка Незванова",
+            "author": 2,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 20,
+        "fields": {
+            "title": "Хозяйка",
+            "author": 2,
+            "genre": 6
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 21,
+        "fields": {
+            "title": "Вишнёвый сад",
+            "author": 3,
+            "genre": 8
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 22,
+        "fields": {
+            "title": "Три сестры",
+            "author": 3,
+            "genre": 8
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 23,
+        "fields": {
+            "title": "Чайка",
+            "author": 3,
+            "genre": 8
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 24,
+        "fields": {
+            "title": "Дядя Ваня",
+            "author": 3,
+            "genre": 8
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 25,
+        "fields": {
+            "title": "Сирена",
+            "author": 3,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 26,
+        "fields": {
+            "title": "Мелочи жизни",
+            "author": 3,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 27,
+        "fields": {
+            "title": "Палата номер 6",
+            "author": 3,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 28,
+        "fields": {
+            "title": "Униженные и оскорблённые(рассказ)",
+            "author": 3,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 29,
+        "fields": {
+            "title": "На дне",
+            "author": 3,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 30,
+        "fields": {
+            "title": "Человек в футляре",
+            "author": 3,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 31,
+        "fields": {
+            "title": "Евгений Онегин",
+            "author": 4,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 32,
+        "fields": {
+            "title": "Руслан и Людмила",
+            "author": 4,
+            "genre": 8
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 33,
+        "fields": {
+            "title": "Капитанская дочка",
+            "author": 4,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 34,
+        "fields": {
+            "title": "Пиковая дама",
+            "author": 4,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 35,
+        "fields": {
+            "title": "Сказка о золушке",
+            "author": 4,
+            "genre": 6
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 36,
+        "fields": {
+            "title": "Метель",
+            "author": 4,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 37,
+        "fields": {
+            "title": "Сказка о рыбаке и рыбке",
+            "author": 4,
+            "genre": 6
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 38,
+        "fields": {
+            "title": "Мастер и Маргарита",
+            "author": 5,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 39,
+        "fields": {
+            "title": "Собачье сердце",
+            "author": 5,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 40,
+        "fields": {
+            "title": "Белая гвардия",
+            "author": 5,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 41,
+        "fields": {
+            "title": "Записки юного врача",
+            "author": 5,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 42,
+        "fields": {
+            "title": "Роман о девяностых",
+            "author": 5,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 43,
+        "fields": {
+            "title": "Творения",
+            "author": 5,
+            "genre": 5
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 44,
+        "fields": {
+            "title": "На правильном пути",
+            "author": 5,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 45,
+        "fields": {
+            "title": "Доктор Живаго",
+            "author": 6,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 46,
+        "fields": {
+            "title": "Светлый путь",
+            "author": 6,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 47,
+        "fields": {
+            "title": "Стихи о Пройденном",
+            "author": 6,
+            "genre": 6
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 48,
+        "fields": {
+            "title": "Заметки и размышления",
+            "author": 6,
+            "genre": 5
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 49,
+        "fields": {
+            "title": "Собрание сочинений",
+            "author": 6,
+            "genre": 5
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 50,
+        "fields": {
+            "title": "Сказки",
+            "author": 7,
+            "genre": 6
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 51,
+        "fields": {
+            "title": "Старуха",
+            "author": 7,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 52,
+        "fields": {
+            "title": "Текст о горле",
+            "author": 7,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 53,
+        "fields": {
+            "title": "Смешная история",
+            "author": 7,
+            "genre": 6
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 54,
+        "fields": {
+            "title": "Четыре квартета",
+            "author": 7,
+            "genre": 5
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 55,
+        "fields": {
+            "title": "Жизнь и судьба",
+            "author": 7,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 56,
+        "fields": {
+            "title": "Мёртвые души",
+            "author": 8,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 57,
+        "fields": {
+            "title": "Ревизор",
+            "author": 8,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 58,
+        "fields": {
+            "title": "Вий",
+            "author": 8,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 59,
+        "fields": {
+            "title": "Шинель",
+            "author": 8,
+            "genre": 6
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 60,
+        "fields": {
+            "title": "Тарас Бульба",
+            "author": 8,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 61,
+        "fields": {
+            "title": "Маленький принц",
+            "author": 9,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 62,
+        "fields": {
+            "title": "Ночной пилот",
+            "author": 9,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 63,
+        "fields": {
+            "title": "Цитадель",
+            "author": 9,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 64,
+        "fields": {
+            "title": "Человеческая комедия",
+            "author": 10,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 65,
+        "fields": {
+            "title": "Гобсек",
+            "author": 10,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 66,
+        "fields": {
+            "title": "Евгения Гранде",
+            "author": 10,
+            "genre": 2
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 67,
+        "fields": {
+            "title": "Сарацин",
+            "author": 10,
+            "genre": 5
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 68,
+        "fields": {
+            "title": "Старик и море",
+            "author": 11,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 69,
+        "fields": {
+            "title": "Прощай, оружие",
+            "author": 11,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 70,
+        "fields": {
+            "title": "По ком звонит колокол",
+            "author": 11,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 71,
+        "fields": {
+            "title": "И восходит солнце",
+            "author": 11,
+            "genre": 1
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 72,
+        "fields": {
+            "title": "Снежный шар",
+            "author": 11,
+            "genre": 6
+        }
+    }
+]
