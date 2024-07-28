@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Главная страница{% endblock title %}
+{% block content %}
+  <h1>Список книг</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Название</th>
+        <th>Автор</th>
+        <th>Жанр</th>
+        <th>Действие</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for book in object_list %}
+        <tr>
+          <td>{{ book.title }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.genre }}</td>
+          <td>
+            <form method="POST">
+              {% csrf_token %}
+              <input type="hidden" name="book_id" value="{{ book.id }}">
+              {% if book.checked_out %}
+                <button type="submit">Вернуть книгу</button>
+              {% else %}
+                <button type=submit>Взять книгу</button>
+              {% endif %}
+            </form>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock content %}
