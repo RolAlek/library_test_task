@@ -11,4 +11,4 @@ class CreateCustomUserView(CreateView):
     model = User
     form_class = CustomUserCreationForm
     template_name = "registration/registration_form.html"
-    success_url = reverse_lazy("homepage")
+    success_url = reverse_lazy("library:index")

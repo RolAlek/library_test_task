@@ -1,3 +1,39 @@
+{% load static %}
 <header>
-  <p>Шапка страницы</p>
+  <nav class="navbar shadow-sm">
+    <div class="container">
+      {% with request.resolver_math.view_name as view_name %}
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link {% if view_name == 'library:index' %} active {% endif %}"
+              href="{% url 'library:index' %}"
+            >
+              Главная
+            </a>
+          </li>
+          {% if user.is_authenticated %}
+            <span class="navbar-text">Пользователь: <b>Логин пользователя</b></span>
+            <li class="nav-item">
+              <a href="{% url 'auth:logout' %}" class="nav-link">Выйти</a>
+            </li>
+          {% else %}
+            <li class="nav-item">
+              <a class="nav-link {% if view_name == 'login' %} active {% endif %}"
+                href="{% url 'auth:login' %}" 
+              >
+                Войти
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if view_name == 'registration' %} active {% endif %}"
+                href="{% url 'auth:registration' %}" 
+              >
+                Регистрация
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      {% endwith %}
+    </div>
+  </nav>
 </header>
