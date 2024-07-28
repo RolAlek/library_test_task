@@ -8,6 +8,9 @@ class Author(models.Model):
         unique=True,
     )
 
+    def __str__(self):
+        return self.full_name
+
 
 class Genre(models.Model):
     name = models.CharField(
@@ -15,6 +18,9 @@ class Genre(models.Model):
         max_length=128,
         unique=True,
     )
+
+    def __str__(self):
+        return self.name
 
 
 class Book(models.Model):
@@ -33,3 +39,4 @@ class Book(models.Model):
         verbose_name="Жанр",
         on_delete=models.CASCADE,
     )
+    checked_out = models.BooleanField(default=False)
