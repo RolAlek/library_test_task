@@ -1,8 +1,10 @@
 import uuid
+from datetime import date
 
 from django.contrib.auth.models import AbstractUser
 from django.core.exceptions import ValidationError
 from django.db import models
+from library.models import Book
 
 
 class CustomUser(AbstractUser):
@@ -39,3 +41,20 @@ class CustomUser(AbstractUser):
             self.is_staff = True
         self.clean()
         super().save(*args, **kwargs)
+
+
+class UserBook(models.Model):
+    user = models.ForeignKey(
+        CustomUser,
+        on_delete=models.CASCADE,
+        related_name="books",
+    )
+    book = models.ForeignKey(
+        Book,
+        on_delete=models.CASCADE,
+        related_name="reader",
+    )
+    receiving_date = models.DateField(auto_now_add=True)
+
+    def days_on_hands(self):
+        return (date.today() - self.receiving_date).days

@@ -5,9 +5,9 @@ from .views import CreateCustomUserView
 app_name = "auth"
 
 urlpatterns = [
-    path("auth/", include("django.contrib.auth.urls")),
+    path("", include("django.contrib.auth.urls")),
     path(
-        "auth/registration/",
+        "registration/",
         CreateCustomUserView.as_view(),
         name="registration",
     ),

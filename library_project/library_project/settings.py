@@ -93,3 +93,6 @@ AUTH_USER_MODEL = 'user.CustomUser'
 STATICFILES_DIRS = [
     BASE_DIR /'static',
 ]
+
+LOGIN_REDIRECT_URL = 'library:reader_books'
+LOGOUT_REDIRECT_URL = 'auth:login'

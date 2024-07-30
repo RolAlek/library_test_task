@@ -12,9 +12,12 @@
             </a>
           </li>
           {% if user.is_authenticated %}
-            <span class="navbar-text">Пользователь: <b>Логин пользователя</b></span>
+            <span class="navbar-text">Пользователь: <b>{{ user.username }}</b></span>
             <li class="nav-item">
-              <a href="{% url 'auth:logout' %}" class="nav-link">Выйти</a>
+              <form action="{% url 'auth:logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary">Выйти</button>
+              </form>
             </li>
           {% else %}
             <li class="nav-item">
