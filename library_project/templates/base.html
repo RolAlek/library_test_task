@@ -6,6 +6,8 @@
   <title>{% block title %}{% endblock title %}</title>
   {% load django_bootstrap5 %}
   {% bootstrap_css %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
   {% include "includes/header.html" %}

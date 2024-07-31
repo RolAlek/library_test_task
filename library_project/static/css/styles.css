@@ -1,0 +1,14 @@
+/* styles.css */
+.container {
+    padding-top: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.table {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+}

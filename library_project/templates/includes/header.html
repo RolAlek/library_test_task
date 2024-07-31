@@ -12,7 +12,9 @@
             </a>
           </li>
           {% if user.is_authenticated %}
-            <span class="navbar-text">Пользователь: <b>{{ user.username }}</b></span>
+            <li class="nav-item">
+              <a href="{% url 'library:reader_books' %}" class="nav-link">{{ user.username }}</a>
+            </li>
             <li class="nav-item">
               <form action="{% url 'auth:logout' %}" method="post">
                 {% csrf_token %}

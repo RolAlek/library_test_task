@@ -56,5 +56,6 @@ class UserBook(models.Model):
     )
     receiving_date = models.DateField(auto_now_add=True)
 
+    @property
     def days_on_hands(self):
         return (date.today() - self.receiving_date).days

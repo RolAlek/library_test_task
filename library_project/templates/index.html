@@ -22,10 +22,10 @@
             <form method="POST">
               {% csrf_token %}
               <input type="hidden" name="book_id" value="{{ book.id }}">
-              {% if book.checked_out %}
-                <button type="submit">Вернуть книгу</button>
+              {% if book.id in user_books %}
+                <button type="submit" class="btn btn-primary">Вернуть книгу</button>
               {% else %}
-                <button type=submit>Взять книгу</button>
+                <button type=submit class="btn btn-primary">Взять книгу</button>
               {% endif %}
             </form>
           </td>

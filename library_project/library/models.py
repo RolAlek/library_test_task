@@ -39,4 +39,3 @@ class Book(models.Model):
         verbose_name="Жанр",
         on_delete=models.CASCADE,
     )
-    checked_out = models.BooleanField(default=False)
