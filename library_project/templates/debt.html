@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+{% block title %}Должники{% endblock title %}
+{% block content %}
+  <h1>Должники:</h1>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Имя пользователя</th>
+          <th scope="col">Имя</th>
+          <th scope="col">Фамилия</th>
+          <th scope="col">Адресс</th>
+          <th scope="col">Книга</th>
+          <th scope="col">Дата получения</th>
+          <th scope="col">На руках</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for obj in object_list %}
+          <tr>
+            <td>{{ obj.user.username }}</td>
+            <td>{{ obj.user.first_name }}</td>
+            <td>{{ obj.user.last_name }}</td>
+            <td>{{ obj.user.address }}</td>
+            <td>{{ obj.book.title }}</td>
+            <td>{{ obj.receiving_date }}</td>
+            <td>{{ obj.days_on_hands }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock content %}

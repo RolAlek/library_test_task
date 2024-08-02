@@ -3,7 +3,7 @@
   <nav class="navbar shadow-sm">
     <div class="container">
       {% with request.resolver_math.view_name as view_name %}
-        <ul class="nav nav-pills">
+        <ul class="nav nav-pills ">
           <li class="nav-item">
             <a class="nav-link {% if view_name == 'library:index' %} active {% endif %}"
               href="{% url 'library:index' %}"
@@ -21,6 +21,9 @@
                 <button type="submit" class="btn btn-primary">Выйти</button>
               </form>
             </li>
+            {% if user.is_librarian %}
+              <li class="nav-item"><a href="{% url 'library:debt' %}" class="nav-link">Должники</a></li>
+            {% endif %}
           {% else %}
             <li class="nav-item">
               <a class="nav-link {% if view_name == 'login' %} active {% endif %}"

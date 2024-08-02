@@ -14,6 +14,8 @@ class CustomUser(AbstractUser):
         (LIBRARIAN, "Библиотекарь"),
         (READER, "Читатель"),
     ]
+    first_name = models.CharField(max_length=32, null=True, blank=True)
+    last_name = models.CharField(max_length=32, null=True, blank=True)
     role = models.CharField(choices=ROLES, max_length=32)
     staff_id = models.UUIDField(
         default=uuid.uuid4,
@@ -23,14 +25,15 @@ class CustomUser(AbstractUser):
     )
     address = models.CharField(max_length=100, null=True, blank=True)
 
-    def __str__(self) -> str:
-        return self.username
-
     def clean(self) -> None:
         if self.role == self.READER and not self.address:
-            raise ValidationError("`address` - обязательное поле для читателя.")
+            raise ValidationError(
+                "`address` - обязательное поле для читателя."
+            )
         if self.role == self.LIBRARIAN and not self.staff_id:
-            raise ValidationError("`staff_id` - обязательное поле для библиотекаря.")
+            raise ValidationError(
+                "`staff_id` - обязательное поле для библиотекаря."
+            )
         super().clean()
 
     def save(self, *args, **kwargs):
@@ -41,6 +44,17 @@ class CustomUser(AbstractUser):
             self.is_staff = True
         self.clean()
         super().save(*args, **kwargs)
+
+    @property
+    def is_librarian(self) -> bool:
+        return self.role == self.LIBRARIAN
+
+    @property
+    def is_reader(self) -> bool:
+        return self.role == self.READER
+
+    def __str__(self) -> str:
+        return self.username
 
 
 class UserBook(models.Model):
