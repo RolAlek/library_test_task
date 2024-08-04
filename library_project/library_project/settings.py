@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'django_bootstrap5',
+    'drf_yasg',
     'user.apps.UserConfig',
     'library.apps.LibraryConfig',
     'api.apps.ApiConfig',

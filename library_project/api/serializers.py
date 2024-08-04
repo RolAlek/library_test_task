@@ -1,6 +1,7 @@
 from django.contrib.auth import get_user_model
-from library.models import Book
 from rest_framework import serializers
+
+from library.models import Book
 from user.models import UserBook
 
 User = get_user_model()
@@ -40,6 +41,16 @@ class SignUpSerializer(serializers.ModelSerializer):
                 "Пользователь с таким именем уже существует."
             )
         return value
+
+    def validate(self, attrs):
+        if (
+            attrs["password"] in attrs["email"]
+            or attrs["password"] in attrs["username"]
+        ):
+            raise serializers.ValidationError(
+                "Пароль не может содержать имя пользователя или email"
+            )
+        return attrs
 
     class Meta:
         model = User

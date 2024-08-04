@@ -1,18 +1,21 @@
 from django.contrib.auth import get_user_model
-from library.models import Book
 from rest_framework import status, viewsets
 from rest_framework.decorators import action
 from rest_framework.generics import CreateAPIView
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
+
+from library.models import Book
 from user.models import UserBook
 
-from .serializers import BookSerializer, UserBookSerializer, SignUpSerializer
+from .serializers import BookSerializer, SignUpSerializer, UserBookSerializer
 
 User = get_user_model()
 
 
 class BookViewset(viewsets.ReadOnlyModelViewSet):
+    """Получение списка доступных в библиотеке книг."""
+
     queryset = Book.objects.all()
     serializer_class = BookSerializer
 
@@ -21,9 +24,13 @@ class BookViewset(viewsets.ReadOnlyModelViewSet):
         methods=("post",),
         permission_classes=(IsAuthenticated,),
     )
-    def take_book(self, request, pk=None):
-        book = self.get_object()
+    def take_book(self, request, pk=None) -> Response:
+        """
+        Дополнительный action-эндпоинт для получения книги пользователем.
 
+        Только аутентифицированных пользователей.
+        """
+        book = self.get_object()
         if UserBook.objects.filter(book=book).exists():
             return Response(
                 {"message": "Книга уже выдана."},
@@ -42,12 +49,12 @@ class BookViewset(viewsets.ReadOnlyModelViewSet):
         methods=("post",),
         permission_classes=(IsAuthenticated,),
     )
-    def return_book(
-        self,
-        request,
-        pk=None,
-        permission_classes=(IsAuthenticated,),
-    ):
+    def return_book(self, request, pk=None) -> Response:
+        """
+        Дополнительный action-эндпоинт для возврата книги читателем.
+
+        Только для аутентифицированных пользователей.
+        """
         book = self.get_object()
         user_book = UserBook.objects.filter(user=request.user, book=book)
         if not user_book.exists():
@@ -67,7 +74,8 @@ class BookViewset(viewsets.ReadOnlyModelViewSet):
         methods=("get",),
         permission_classes=(IsAuthenticated,),
     )
-    def my_books(self, request):
+    def my_books(self, request) -> Response:
+        """Книги на руках у пользователя."""
         user_books = UserBook.objects.filter(user=request.user)
         if not user_books.exists():
             return Response(
@@ -81,6 +89,7 @@ class BookViewset(viewsets.ReadOnlyModelViewSet):
 
 
 class SignUpView(CreateAPIView):
+    """Регистрация нового пользователя."""
     queryset = User.objects.all()
     serializer_class = SignUpSerializer
     permission_classes = (AllowAny,)
