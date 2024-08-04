@@ -82,14 +82,13 @@ class BookViewset(viewsets.ReadOnlyModelViewSet):
                 {"message": "Вы не получили не одной книги."},
                 status=status.HTTP_400_BAD_REQUEST,
             )
-        serializer = UserBookSerializer(
-            user_books,
-            many=True)
+        serializer = UserBookSerializer(user_books, many=True)
         return Response({"data": serializer.data}, status=status.HTTP_200_OK)
 
 
 class SignUpView(CreateAPIView):
     """Регистрация нового пользователя."""
+
     queryset = User.objects.all()
     serializer_class = SignUpSerializer
     permission_classes = (AllowAny,)
