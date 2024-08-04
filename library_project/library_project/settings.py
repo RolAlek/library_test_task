@@ -18,6 +18,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
     'django_bootstrap5',
     'user.apps.UserConfig',
     'library.apps.LibraryConfig',
@@ -98,3 +99,9 @@ STATICFILES_DIRS = [
 
 LOGIN_REDIRECT_URL = 'library:reader_books'
 LOGOUT_REDIRECT_URL = 'auth:login'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}
