@@ -7,6 +7,7 @@ from django.shortcuts import get_object_or_404, redirect
 from django.views.generic import ListView
 
 from user.models import UserBook
+
 from .mixins import LibrarianRequiredMixin
 from .models import Book
 

@@ -55,7 +55,7 @@ class CustomUser(AbstractUser):
         return self.role == self.READER
 
     def __str__(self) -> str:
-        return self.username
+        return f"{self.first_name} {self.last_name}"
 
 
 class UserBook(models.Model):
