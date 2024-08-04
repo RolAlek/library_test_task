@@ -70,7 +70,13 @@ class UserBook(models.Model):
         related_name="reader",
     )
     receiving_date = models.DateField(auto_now_add=True)
+    returned_date = models.DateField(null=True, blank=True, default=None)
+    is_returned = models.BooleanField(default=False)
 
     @property
     def days_on_hands(self):
         return (date.today() - self.receiving_date).days
+
+    class Meta:
+        verbose_name = "На руках"
+        verbose_name_plural = "На руках"
